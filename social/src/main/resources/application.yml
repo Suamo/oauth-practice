@@ -1,4 +1,4 @@
-disableEmailVerification: true
+
 
 logging:
   level:
@@ -18,3 +18,9 @@ spring:
           github:
             client-id: 1b84e4a78b55b6a36868
             client-secret: b032bacdac271187b844ca0ef709d321678f6545
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "beans"
