@@ -1,0 +1,20 @@
+disableEmailVerification: true
+
+logging:
+  level:
+    root: info
+    com.memorynotfound: info
+    som.springframwekrk.web: info
+    som.springframwekrk.security: info
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            client-id: 1034469063693827
+            client-secret: 2c92994d932206011422b4ff578b6270
+          github:
+            client-id: 1b84e4a78b55b6a36868
+            client-secret: b032bacdac271187b844ca0ef709d321678f6545

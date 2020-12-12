@@ -1,13 +1,13 @@
-package com.example.oauthpractice;
+package com.example.social;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OauthPracticeApplication {
+public class SocialConnectApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OauthPracticeApplication.class, args);
+		SpringApplication.run(SocialConnectApplication.class, args);
 	}
 
 }
