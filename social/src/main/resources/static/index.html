@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
     <title>Social login demo</title>
+    <style>
+        div {
+            font-size: large;
+        }
+        span {
+            font-weight: bold;
+        }
+    </style>
     <script type="text/javascript">
         function loadUser() {
             var xmlHttp = new XMLHttpRequest();
@@ -12,6 +19,7 @@
                 var status = xmlHttp.status;
                 if (status === 200) {
                     document.getElementById("user").innerText = xmlHttp.response.name;
+                    document.getElementById("provider").innerText = xmlHttp.response.provider;
                 } else {
                     document.getElementById("container").innerText = "Failed to log in";
                 }
@@ -21,9 +29,9 @@
     </script>
 </head>
 <body onload="loadUser()">
-<h1>Demo</h1>
+<h1>Social login demo</h1>
 <div id="container">
-    Logged in as: <span id="user"></span>
+    Logged in to a <span id="provider"></span> as <span id="user"></span>
 </div>
 
 </body>

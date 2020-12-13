@@ -1,6 +1,5 @@
 package com.example.social;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.boot.SpringApplication;
@@ -32,7 +31,10 @@ public class SocialConnectApplication {
             throw new IllegalArgumentException("Please configure username attribute for the provider");
         }
 
-        return Collections.singletonMap("name", principal.getAttribute(userNameAttribute));
+        return new HashMap<String, Object>() {{
+            put("provider", providerId);
+            put("name", principal.getAttribute(userNameAttribute));
+        }};
     }
 
 }
